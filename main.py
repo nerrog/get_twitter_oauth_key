@@ -6,13 +6,6 @@ import webbrowser, argparse ,web_server, pprint
 CK = ""
 CS = ""
 
-def yes_no_input(txt):
-    while True:
-        choice = input(txt).lower()
-        if choice in ['y', 'ye', 'yes']:
-            return True
-        elif choice in ['n', 'no']:
-            return False
 
 def gen_auth_url(consumer_key, consumer_secret, oauth_callback):
     print("Generating the URL for authentication...")
@@ -58,7 +51,6 @@ def http_callback(list):
     print("===ACCESS TOKEN===")
     pprint.pprint(access_token)
     print("==================")
-    print("Bye")
 
 
 def main() -> None:
